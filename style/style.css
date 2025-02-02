@@ -159,6 +159,10 @@
   list-style-type: none;
 }
 
+.offers__img-right {
+  width: 94%;
+}
+
 .text__offers-list-item {
   margin-top: 2.08vw;
   padding: 0 0 2.08vw 4vw;
