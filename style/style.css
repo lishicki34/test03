@@ -7,8 +7,11 @@
   gap: 5.2vw;
   margin-top: 1vw;
   margin-left: 9.68vw;
+  padding-left: 1vw;
   width: 40.78vw;
   height: 3vw;
+  background-color: rgb(34, 34, 34, .7);
+  border-radius: 30px;
 }
 
 .logo {
@@ -138,29 +141,30 @@
 
 .offers {
   display: grid;
-  grid-template-columns: 30vw 40vw 30vw;
+  grid-template-columns: repeat(7, 1fr);
   padding-top: 5.2vw;
   background-color: rgb(40, 40, 41);
 }
 
-.offers__img {
-  width: 94%;
+.offers__img-left {
+  grid-column: 1/3;
 }
 
 .text__group-offers {
   display: flex;
+  grid-column: 3/6;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
 
+.offers__img-right {
+  grid-column: 6/8;
+}
+
 .text__offers-list {
   margin: 2.76vw 2.76vw 0 2.76vw;
   list-style-type: none;
-}
-
-.offers__img-right {
-  width: 94%;
 }
 
 .text__offers-list-item {
@@ -404,6 +408,62 @@
 }
 
 @media (max-width: 768px) {
+  .main {
+    display: flex;
+    justify-content: center;
+  }
+
+  .button-main {
+    height: 100%;
+    width: 30%;
+  }
+
+  .text__group {
+    display: grid;
+    grid-template-rows: 1fr min-content 1fr min-content;
+    justify-items: center;
+    align-items: end;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .title {
+    text-align: center;
+    margin: 0;
+    letter-spacing: 1px;
+  }
+
+  .subtitle {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    margin: 0;
+    letter-spacing: 0;
+  }
+
+  .text__info-list {
+    margin: 0;
+  }
+
+  .text__info-list-item {
+    background-position: 0 1.6vw;
+  }
+
+  .text__info-list-item:not(:last-child) {
+    margin-bottom: 1vw;
+  }
+
+  .text {
+    letter-spacing: .5px;
+  }
+
+  .text__accent {
+    letter-spacing: .5px;
+  }
+
+  .main__img {
+    display: none;
+  }
+
   .offers {
     display: grid;
     grid-template-columns: none;
@@ -411,8 +471,22 @@
     justify-content: center;
   }
 
+  .offers__img-left {
+    grid-column: 1/8;
+    grid-row: 1/2;
+  }
+
+  .text__group-offers {
+    grid-column: 1/8;
+    grid-row: 2/3;
+  }
+
+  .offers__img-right {
+    grid-column: 1/8;
+    grid-row: 3/4;
+  }
+
   .offers__img {
-    width: 95vw;
     justify-self: center;
   }
 
