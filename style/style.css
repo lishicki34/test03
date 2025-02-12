@@ -50,6 +50,10 @@
   text-decoration: none;
 }
 
+.button-drop {
+  display: none;
+}
+
 .main {
   display: flex;
   flex-direction: row;
@@ -408,9 +412,61 @@
 }
 
 @media (max-width: 768px) {
+
+  .header {
+    margin: 0;
+  }
+
+  .logo {
+    padding: 0;
+  }
+
+  .button-drop {
+    display: block;
+    border: none;
+    height: 5px;
+    width: 5px;
+    background-color: white;
+  }
+
+  .header__menu {
+    position: relative;
+    display: inline-block;
+  }
+
+  .header__link-list {
+    display: none;
+    position: absolute;
+    background-color: #313131;
+    min-width: 50px;
+    z-index: 1;
+    border-radius: 10%;
+  }
+
+  .header__link-list-item {
+    color: black;
+    padding: 7px 10px;
+    text-decoration: none;
+    display: block;
+    font-size: 2vw;
+  }
+
+  .header__link-list-item:hover {
+    background-color: #ddd;
+    border-radius: 10%;
+  }
+
+  .header__menu:hover .header__link-list {
+    display: block;
+  }
+
   .main {
     display: flex;
     justify-content: center;
+  }
+
+  .button {
+    color: black;
   }
 
   .button-main {
