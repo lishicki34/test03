@@ -136,11 +136,12 @@
 }
 
 .button:hover {
-  background-color: rgb(27, 24, 56);
+  background-color: rgb(47, 47, 48);
+  color: white;
 }
 
 .main__img {
-  max-width: 39.74vw;
+  max-width: 45.74vw;
 }
 
 .offers {
@@ -415,6 +416,8 @@
 
   .header {
     margin: 0;
+    gap: 1vw;
+    width: 20vw;
   }
 
   .logo {
@@ -423,10 +426,12 @@
 
   .button-drop {
     display: block;
+    margin-top: 1px;
     border: none;
+    border-radius: 2px;
     height: 5px;
     width: 5px;
-    background-color: white;
+    background-color: rgb(59, 58, 58);
   }
 
   .header__menu {
@@ -440,7 +445,7 @@
     background-color: #313131;
     min-width: 50px;
     z-index: 1;
-    border-radius: 10%;
+    border-radius: 10px;
   }
 
   .header__link-list-item {
@@ -453,11 +458,15 @@
 
   .header__link-list-item:hover {
     background-color: #ddd;
-    border-radius: 10%;
+    border-radius: 10px;
   }
 
   .header__menu:hover .header__link-list {
     display: block;
+  }
+
+  .header__menu:hover .button-drop {
+    background-color: transparent;
   }
 
   .main {
